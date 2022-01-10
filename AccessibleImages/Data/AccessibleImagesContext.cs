@@ -15,5 +15,7 @@ namespace AccessibleImages.Data
         }
 
         public DbSet<AccessibleImages.Models.Image> Image { get; set; }
+
+        public DbSet<AccessibleImages.Models.User> User { get; set; }
     }
 }

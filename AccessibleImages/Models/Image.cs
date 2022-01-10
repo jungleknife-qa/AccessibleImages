@@ -10,5 +10,7 @@ namespace AccessibleImages.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string AlternativeText { get; set; }
+        [System.ComponentModel.DataAnnotations.Schema.ForeignKey("UserId")]
+        public virtual User Users { get; set; }
     }
 }
