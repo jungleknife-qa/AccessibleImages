@@ -15,5 +15,24 @@ namespace AccessibleImages.Models
         public string Email { get; set; }
         public string Password { get; set; }
 
+        public bool CheckPassword(string password)
+        {
+            if (password.Any(char.IsDigit))
+                return true;
+
+            return false;
+
+        }
+
+        public bool CheckPasswordLength(string password)
+        {
+            if (password.Length >= 8)
+                return true;
+
+            return false;
+
+        }
+
+
     }
 }

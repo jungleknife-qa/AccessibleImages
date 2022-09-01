@@ -12,5 +12,22 @@ namespace AccessibleImages.Models
         public string AlternativeText { get; set; }
         [System.ComponentModel.DataAnnotations.Schema.ForeignKey("UserId")]
         public virtual User Users { get; set; }
+
+        public bool CheckTitle(string title)
+        {
+            if (title.Any(char.IsDigit))
+                return false;
+
+            return true;
+                
+        }
+
+        public bool CheckAlternativeText(string alternativeText)
+        {
+            if (alternativeText.Length >= 16)
+                return true;
+
+            return false;
+        }
     }
 }
